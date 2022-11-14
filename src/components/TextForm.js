@@ -26,11 +26,11 @@ export default function TextForm(props) {
     const [text, setText] = useState('Enter Text here');
     return (
         <>
-        <div className="container">
+        <div className="container" style={{color : props.mode==='dark'?'grey':'black'}}>
             <h1> {props.heading} </h1>
             <div className="mb-3">
                 {/* <label for="myBox" className="form-label">Enter Your Text</label> */}
-                <textarea className="form-control" value={text} onChange={handleOnChange} id="myBox" rows="8"></textarea>
+                <textarea className="form-control" value={text} onChange={handleOnChange} style={{backgroundColor : props.mode==='dark'?'grey':'white'}} id="myBox" rows="8"></textarea>
             </div>
             <button className="btn btn-primary mx-2" onClick={handleUpClick}>Convert To upper case</button>
             <button className="btn btn-primary mx-2" onClick={handleLoClick}>Convert To Lower case</button>
