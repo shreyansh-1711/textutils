@@ -56,3 +56,6 @@ function App() {
 }
 
 export default App;
+
+
+// Routes isn't used because to host on github routes create a problem
